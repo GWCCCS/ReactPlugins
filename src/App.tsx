@@ -32,7 +32,7 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route path="/home" component={Home}/>
-        <Route path="/nnew" component={NewItem}/>
+        <Route path="/new" component={NewItem}/>
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>

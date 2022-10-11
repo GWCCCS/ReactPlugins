@@ -1,5 +1,6 @@
 import { IonBackButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
+import IconExample from './IconExample';
 
 const NewItem: React.FC = () => {
   return (
@@ -12,7 +13,9 @@ const NewItem: React.FC = () => {
           <IonTitle>New Item</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent></IonContent>
+      <IonContent>
+      <IconExample />
+      </IonContent>
     </IonPage>
   );
 };
