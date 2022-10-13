@@ -1,4 +1,4 @@
-import { IonBadge, IonCheckbox, IonContent, IonFab, IonFabButton, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonNote, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBadge, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCheckbox, IonContent, IonFab, IonFabButton, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonNote, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
@@ -30,6 +30,15 @@ const Home: React.FC<RouteComponentProps> = (props) => {
           </IonFabButton>
         </IonFab>
         <ExploreContainer />
+        <IonCard>
+          <IonCardHeader>
+            <IonCardSubtitle>CSC262</IonCardSubtitle>
+            <IonCardTitle>Ionic Card Component</IonCardTitle>
+          </IonCardHeader>
+          <IonCardContent>
+            This is a card to display additional content
+          </IonCardContent>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
