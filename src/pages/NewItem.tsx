@@ -1,6 +1,6 @@
 import { IonBackButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
-import IconExample from './IconExample';
+import IconExample from '../components/IconExample';
 
 const NewItem: React.FC = () => {
   return (
