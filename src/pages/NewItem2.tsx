@@ -17,6 +17,19 @@ const NewItem2: React.FC = (props) => {
       <IonContent>
       <IonGrid>
         <IonRow>
+          <IonCol size="auto">1</IonCol>
+          <IonCol>2</IonCol>
+          <IonCol>3</IonCol>
+        </IonRow>
+        <IonRow>
+          <IonCol>1</IonCol>
+          <IonCol size="2">2</IonCol>
+          <IonCol>3</IonCol>
+        </IonRow>        
+      </IonGrid>
+
+      <IonGrid>
+        <IonRow>
           <IonCol>1</IonCol>
           <IonCol>2</IonCol>
           <IonCol>3</IonCol>
