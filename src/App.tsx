@@ -20,10 +20,11 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 import NewItem from './pages/NewItem';
-
+import NewItem2 from './pages/NewItem2';
 
 /* Theme variables */
 import './theme/variables.css';
+import IconExample from './components/IconExample';
 
 setupIonicReact();
 
@@ -33,10 +34,15 @@ const App: React.FC = () => (
       <IonRouterOutlet>
         <Route path="/home" component={Home}/>
         <Route path="/new" component={NewItem}/>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
+        <Route path="/secretpath" component={NewItem}/>
+        <Route path='/new2' component={NewItem2}/>
+        <Redirect exact from="/" to="/home" />
+        <Route path="/balloon" component={IconExample}/>
+        <Route component={NewItem}/>
       </IonRouterOutlet>
+      <Route exact path="/2new2" render={(props) => {
+          return <NewItem/>; } }/>
+
     </IonReactRouter>
   </IonApp>
 );

@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { IonButton, IonContent, IonIcon } from '@ionic/react';
-import { camera } from 'ionicons/icons';
+import { balloon } from 'ionicons/icons';
 
  const IconExample: React.FC = () => {
-  return (<IonContent>
-        <IonButton>
-            <IonIcon icon={camera} />
-            Take Picture
+ const [count, setCount] = useState([{initialvalue:0}]);
+  return (
+        <IonContent>
+        <IonButton onClick={() => setCount(count)}>
+            <IonIcon icon={balloon}></IonIcon>
+    
         </IonButton>
-    </IonContent>);
+        </IonContent>
+        );
 };
 
 export default IconExample;

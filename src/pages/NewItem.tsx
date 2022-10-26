@@ -2,13 +2,13 @@ import { IonBackButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, Io
 import React from 'react';
 import IconExample from '../components/IconExample';
 
-const NewItem: React.FC = () => {
+const NewItem: React.FC = (props) => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonBackButton />
+            <IonBackButton defaultHref='/home'/>
           </IonButtons>
           <IonTitle>New Item</IonTitle>
         </IonToolbar>

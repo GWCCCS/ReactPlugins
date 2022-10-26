@@ -1,4 +1,4 @@
-import { IonBadge, IonCheckbox, IonContent, IonFab, IonFabButton, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonNote, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBadge, IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCheckbox, IonContent, IonFab, IonFabButton, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonNote, IonPage, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
@@ -10,7 +10,7 @@ const Home: React.FC<RouteComponentProps> = (props) => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Header Toolbar Title was Blank</IonTitle>
+          <IonTitle>CSC 262 App Example</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -20,16 +20,36 @@ const Home: React.FC<RouteComponentProps> = (props) => {
             <IonLabel>
               <h1>Create Idea</h1>
               <IonNote>Run Idea by Avery</IonNote>
-              <IonBadge color="success" slot="end">5 Days</IonBadge>
+              <IonBadge color="success" slot="end">10 Days</IonBadge>
             </IonLabel>
           </IonItem>
         </IonList>
+        <IonCard color = "warning" routerLink="/new2">
+          <IonCardHeader>
+            <IonCardTitle>CSC 262 App Example 2</IonCardTitle>
+            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+          </IonCardHeader>
+
+          <IonCardContent>
+            The quick brown fox...
+          </IonCardContent>
+          <IonList>
+          <IonItem>
+            <IonThumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </IonThumbnail>
+            <IonLabel>Item</IonLabel>
+          </IonItem>
+          </IonList>
+          <IonButton fill="clear" routerLink="/secretpath">Page 1</IonButton>
+          <IonButton fill="clear" routerLink="/new2">Page 2</IonButton>
+        </IonCard>
         <IonFab vertical='bottom' horizontal='end' slot='fixed'>
           <IonFabButton onClick={() => props.history.push('/new')}>
             <IonIcon icon={add}/>
           </IonFabButton>
         </IonFab>
-        <ExploreContainer />
+        <ExploreContainer/>
       </IonContent>
     </IonPage>
   );
