@@ -24,9 +24,9 @@ const Home: React.FC<RouteComponentProps> = (props) => {
             </IonLabel>
           </IonItem>
         </IonList>
-        <IonCard color = "warning" routerLink="/new2">
+        <IonCard color = "warning">
           <IonCardHeader>
-            <IonCardTitle>CSC 262 App Example 2</IonCardTitle>
+            <IonCardTitle>CSC 262 App Example 3</IonCardTitle>
             <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
           </IonCardHeader>
 
@@ -41,11 +41,11 @@ const Home: React.FC<RouteComponentProps> = (props) => {
             <IonLabel>Item</IonLabel>
           </IonItem>
           </IonList>
-          <IonButton fill="clear" routerLink="/secretpath">Page 1</IonButton>
-          <IonButton fill="clear" routerLink="/new2">Page 2</IonButton>
+          <IonButton fill="clear" routerLink="/haptic">Page 1</IonButton>
+          <IonButton fill="clear" routerLink="/device">Page 2</IonButton>
         </IonCard>
         <IonFab vertical='bottom' horizontal='end' slot='fixed'>
-          <IonFabButton onClick={() => props.history.push('/new')}>
+          <IonFabButton onClick={() => props.history.push('/new2')}>
             <IonIcon icon={add}/>
           </IonFabButton>
         </IonFab>
