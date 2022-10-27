@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import StatusBarView from './StatusBarView';
-import { Plugins, StatusBarStyle } from '@capacitor/core';
+import { Plugins,  } from '@capacitor/core';
+import { StatusBar, Style } from '@capacitor/status-bar';
+
 export class StatusBarContainer extends Component {
     statusBar: any;
     state: { isStatusBarLight: boolean }
@@ -14,7 +16,7 @@ export class StatusBarContainer extends Component {
     }
     changeStatusBar() {
         this.statusBar.setStyle({
-          style: this.state.isStatusBarLight ? StatusBarStyle.Dark : StatusBarStyle.Light
+          style: this.state.isStatusBarLight ? Style.Dark : Style.Light
         });
         this.setState({
             isStatusBarLight : !this.state.isStatusBarLight
@@ -37,7 +39,7 @@ export class StatusBarContainer extends Component {
     changeColor() {
         const { StatusBar } = Plugins;
         StatusBar.setStyle({
-            style: this.isStatusBarLight ? StatusBarStyle.Dark : StatusBarStyle.Light
+            style: this.isStatusBarLight ? Style.Dark : Style.Light
         });
         this.isStatusBarLight = !this.isStatusBarLight;
         StatusBar.setOverlaysWebView({

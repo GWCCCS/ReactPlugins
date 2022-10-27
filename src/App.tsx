@@ -22,6 +22,14 @@ import '@ionic/react/css/display.css';
 import NewItem from './pages/NewItem';
 import NewItem2 from './pages/NewItem2';
 
+import StatusBarContainer from './components/Status/StatusBarContainer';
+import DeviceContainer from './components/Device/DeviceContainer';
+import AppContainer from './components/App/AppContainer';
+import HapticContainer from './components/Haptics/HapticsContainer';
+import MotionContainer from './components/Motion/MotionContainer';
+import NetworkContainer from './components/Network/NetworkContainer';
+
+
 /* Theme variables */
 import './theme/variables.css';
 import IconExample from './components/IconExample';
@@ -33,10 +41,18 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route path="/home" component={Home}/>
+        <Redirect exact from="/" to="/home" />
+        <Route path="/statusBar" component={StatusBarContainer} exact={true} />
+        <Route path="/network" component={NetworkContainer} exact={true} />
+        <Route path="/motion" component={MotionContainer} exact={true} />
+        <Route path="/haptic" component={HapticContainer} exact={true} />
+        <Route path="/device" component={DeviceContainer} exact={true} />
+        <Route path="/appApi" component={AppContainer} exact={true} />
+
         <Route path="/new" component={NewItem}/>
         <Route path="/secretpath" component={NewItem}/>
         <Route path='/new2' component={NewItem2}/>
-        <Redirect exact from="/" to="/home" />
+
         <Route path="/balloon" component={IconExample}/>
         <Route component={NewItem}/>
       </IonRouterOutlet>
