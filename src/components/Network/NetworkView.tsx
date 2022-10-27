@@ -14,7 +14,7 @@ const NetworkView = ({networkStatus, connectedWithInternet}: any) => {
             <div className="mainContent">
                 <div>
                     <div>
-                        Using Network Plugin we can moniter netowrk status, along with current state of the network
+                        Using Network Plugin we can moniter network status, along with current state of the network
                     </div>
                     <div>
                         Network: {networkStatus}

@@ -43,7 +43,6 @@ export class StatusBarContainer extends Component {
         });
     }
     showStatusBar() {
-        const { StatusBar } = Plugins;
         StatusBar.show();
     }
     render() {

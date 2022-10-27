@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MotionView from './MotionView';
-import { Plugins, Permissions, } from '@capacitor/core';
+import { Motion } from '@capacitor/motion';
 
 export class MotionContainer extends Component {
     state: {result : any, rotationResult: any};
@@ -12,7 +12,6 @@ export class MotionContainer extends Component {
         }
     }
     componentDidMount() {
-        const { Motion } = Plugins;
         Motion.addListener('accel', (event) => {
               this.setState({
                   result: event.acceleration,
@@ -21,7 +20,6 @@ export class MotionContainer extends Component {
         })
     }
     componentWillUnmount() {
-        const { Motion } = Plugins;
         Motion.removeAllListeners();
     }
     render() {
