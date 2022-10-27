@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AppView from './AppView';
-import { Plugins, AppState } from '@capacitor/core';
+import { App } from '@capacitor/app';
 
 export class AppContainer extends Component {
 
@@ -11,13 +11,11 @@ export class AppContainer extends Component {
         }
     }
     exitApp() {
-        const { App } = Plugins;
         App.exitApp();
     }
     async openUrl() {
-        const { App } = Plugins;
-        let ret = await App.openUrl({ url: 'com.whatsapp' });
-        console.log('Open url response: ', ret);
+        //let ret = await App.openUrl({ url: 'com.whatsapp' });
+        //console.log('Open url response: ', ret);
         App.addListener('appUrlOpen', (data: any) => {
             console.log('App opened with URL: ' +  data.url);
         });

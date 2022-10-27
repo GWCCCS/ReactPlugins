@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plugins } from '@capacitor/core';
+import { Network } from '@capacitor/network';
 import NetworkView from './NetworkView';
 
 class NetworkContainer extends React.Component {
@@ -22,7 +22,6 @@ class NetworkContainer extends React.Component {
         });
     }
     async checkForConnection() {
-        const { Network } = Plugins;
         this.network = Network;
         let status = await this.network.getStatus();
         this.setState({

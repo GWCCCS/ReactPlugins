@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import DeviceView from './DeviceView';
-import { Plugins } from '@capacitor/core';
+import { Device } from '@capacitor/device';
 
 export class DeviceContainer extends Component {
 
@@ -15,8 +15,7 @@ export class DeviceContainer extends Component {
         }
     }
     async getDeviceInfo() {
-        const { Device } = Plugins;
-        const info = await Device.getInfo();
+         const info = await Device.getInfo();
         const batteryInfo = await Device.getBatteryInfo();
         const langInfo = await Device.getLanguageCode();
         this.setState({

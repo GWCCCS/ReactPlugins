@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import StatusBarView from './StatusBarView';
-import { Plugins,  } from '@capacitor/core';
 import { StatusBar, Style } from '@capacitor/status-bar';
 
 export class StatusBarContainer extends Component {
@@ -28,16 +27,13 @@ export class StatusBarContainer extends Component {
         });
       }
     async componentDidMount() {
-        const { StatusBar } = Plugins;
         this.statusBar = StatusBar;
         this.statusBar.show();
     }
     hideStatusBar() {
-        const { StatusBar } = Plugins;
         StatusBar.hide();
     }
     changeColor() {
-        const { StatusBar } = Plugins;
         StatusBar.setStyle({
             style: this.isStatusBarLight ? Style.Dark : Style.Light
         });

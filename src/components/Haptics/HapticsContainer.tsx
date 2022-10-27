@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import HapticView from './HapticView';
-import { Plugins, HapticsImpactStyle } from '@capacitor/core';
+import { Haptics, ImpactStyle } from '@capacitor/haptics';
 export class HapticContainer extends Component {
 
     constructor(props: any) {
@@ -10,21 +10,17 @@ export class HapticContainer extends Component {
         }
     }
     vibrateDevice() {
-        const { Haptics } = Plugins;
         Haptics.vibrate();
     }
     selectionStart() {
-        const { Haptics } = Plugins;
         Haptics.selectionStart();
     }
 
     selectionStop() {
-        const { Haptics } = Plugins;
         Haptics.selectionEnd();
     }
 
-    hapticsImpact(style = HapticsImpactStyle.Heavy) {
-        const { Haptics } = Plugins;
+    hapticsImpact(style = ImpactStyle.Heavy) {
         Haptics.impact({
             style: style
         });
@@ -32,9 +28,9 @@ export class HapticContainer extends Component {
 
     changeHapticStyle(type: any) {
         if (type === 'Medium') {
-            this.hapticsImpact(HapticsImpactStyle.Medium);
+            this.hapticsImpact(ImpactStyle.Medium);
         } else {
-            this.hapticsImpact(HapticsImpactStyle.Light);
+            this.hapticsImpact(ImpactStyle.Light);
         }
     }
     render() {
