@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import DeviceView from './Device';
+import DeviceView from './DeviceView';
 import { Plugins } from '@capacitor/core';
 
 export class DeviceContainer extends Component {
@@ -39,3 +39,5 @@ export class DeviceContainer extends Component {
         )
     }
 }
+
+export default DeviceContainer

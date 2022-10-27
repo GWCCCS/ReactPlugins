@@ -33,3 +33,5 @@ export class MotionContainer extends Component {
         )
     }
 }
+
+export default MotionContainer
