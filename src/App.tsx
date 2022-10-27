@@ -28,7 +28,7 @@ import AppContainer from './components/App/AppContainer';
 import HapticContainer from './components/Haptics/HapticsContainer';
 import MotionContainer from './components/Motion/MotionContainer';
 import NetworkContainer from './components/Network/NetworkContainer';
-
+import GeoContainer from './components/geo/GeoContainer';
 
 /* Theme variables */
 import './theme/variables.css';
@@ -48,7 +48,7 @@ const App: React.FC = () => (
         <Route path="/haptic" component={HapticContainer} exact={true} />
         <Route path="/device" component={DeviceContainer} exact={true} />
         <Route path="/appApi" component={AppContainer} exact={true} />
-
+        <Route path="/geo" component={GeoContainer} exact={true}/>
         <Route path="/new" component={NewItem}/>
         <Route path="/secretpath" component={NewItem}/>
         <Route path='/new2' component={NewItem2}/>

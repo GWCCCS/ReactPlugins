@@ -6,6 +6,7 @@ export class DeviceContainer extends Component {
 
     state: { mobileInfo: string, batteryInfo: string, languageInfo: string }
     devicePlugin: any;
+
     constructor(props: any) {
         super(props)
         this.state = {
@@ -15,7 +16,7 @@ export class DeviceContainer extends Component {
         }
     }
     async getDeviceInfo() {
-         const info = await Device.getInfo();
+        const info = await Device.getInfo();
         const batteryInfo = await Device.getBatteryInfo();
         const langInfo = await Device.getLanguageCode();
         this.setState({
