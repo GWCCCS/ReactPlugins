@@ -3,27 +3,27 @@ import { Geolocation } from '@capacitor/geolocation';
 import GeoView from './GeoView';
 
 class GeoContainer extends React.Component {
-    state: { coordinates: any }
+    coordinates: any;
     constructor(props :any) {
         super(props)
-        this.state = {
-            coordinates: '',
-        }
+        console.log("instance created");
     }
 
-    updateCurrentPosition = async () => {
+    getCurrentPosition = async () => {
         let lclcoordinates = await Geolocation.getCurrentPosition();
-        this.setState({coordinates : lclcoordinates}); 
+        //this.setState({coordinates : lclcoordinates}); 
+        console.log("position updated", lclcoordinates);
+        return lclcoordinates;
       };
+
     async componentDidMount() {
-        this.updateCurrentPosition();
+        this.coordinates = this.getCurrentPosition(); 
     }
 
     render() {
         return (
             <GeoView 
-                coordinates= {this.state.coordinates}
-                updateposition = {() => {this.updateCurrentPosition()}}
+                coordinates= {this.coordinates}
             />
         )
     }

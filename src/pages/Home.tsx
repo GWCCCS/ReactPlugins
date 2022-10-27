@@ -41,7 +41,7 @@ const Home: React.FC<RouteComponentProps> = (props) => {
             <IonLabel>Item</IonLabel>
           </IonItem>
           </IonList>
-          <IonButton fill="clear" routerLink="/haptic">Page 1</IonButton>
+          <IonButton fill="clear" routerLink="/geo">Page 1</IonButton>
           <IonButton fill="clear" routerLink="/device">Page 2</IonButton>
         </IonCard>
         <IonFab vertical='bottom' horizontal='end' slot='fixed'>
