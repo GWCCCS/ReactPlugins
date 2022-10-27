@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import StatusBarView from './StatusBarView';
-import {StatusBar, Style } from '@capacitor/status-bar';
-import { Plugins } from '@capacitor/core';
+import { Plugins,  } from '@capacitor/core';
+import { StatusBar, Style } from '@capacitor/status-bar';
+
 export class StatusBarContainer extends Component {
     statusBar: any;
     state: { isStatusBarLight: boolean }
