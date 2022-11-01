@@ -12,13 +12,16 @@ const DeviceView = ({ mobileInfo, batteryInfo, languageInfo}: any) => {
         <IonContent fullscreen>
             <div>
                 <div>
-                    Mobile Info: {mobileInfo}
+                <p> Mobile Info: {mobileInfo}
+                    </p>
                 </div>
                 <div>
                     Battery Info: {batteryInfo}
                 </div>
                 <div>
-                    Language Info: {languageInfo}
+                    <p>
+                        Language Info: {languageInfo}
+                        </p>
                 </div>
             </div>
         </IonContent>

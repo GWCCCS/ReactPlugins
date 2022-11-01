@@ -15,7 +15,7 @@ export class DeviceContainer extends Component {
         }
     }
     async getDeviceInfo() {
-         const info = await Device.getInfo();
+        const info = await Device.getInfo();
         const batteryInfo = await Device.getBatteryInfo();
         const langInfo = await Device.getLanguageCode();
         this.setState({
