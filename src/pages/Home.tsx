@@ -41,8 +41,10 @@ const Home: React.FC<RouteComponentProps> = (props) => {
             <IonLabel>Item</IonLabel>
           </IonItem>
           </IonList>
-          <IonButton fill="clear" routerLink="/haptic">Page 1</IonButton>
-          <IonButton fill="clear" routerLink="/device">Page 2</IonButton>
+          <IonButton fill="clear" routerLink="/haptic">Haptic</IonButton>
+          <IonButton fill="clear" routerLink="/device">Device</IonButton>
+          <IonButton fill="clear" routerLink="/statusBar">Status</IonButton>
+          <IonButton fill="clear" routerLink="/motion">Motion</IonButton>          
         </IonCard>
         <IonFab vertical='bottom' horizontal='end' slot='fixed'>
           <IonFabButton onClick={() => props.history.push('/new2')}>
