@@ -1,0 +1,24 @@
+.mainContent {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0%;
+    transform: translateY(-50%);
+  }
+  
+  .mainContent strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .mainContent p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+  }
+  
+  .mainContent a {
+    text-decoration: none;
+  }
