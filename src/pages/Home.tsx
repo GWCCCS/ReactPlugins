@@ -46,7 +46,8 @@ const Home: React.FC<RouteComponentProps> = (props) => {
           <IonButton fill="clear" routerLink="/statusBar">Status</IonButton>
           <IonButton fill="clear" routerLink="/motion">Motion</IonButton>          
           <IonButton fill="clear" routerLink="/cct">classcompTemplate</IonButton>     
-          <IonButton fill="clear" routerLink="/fcptv">funccompViewTemplate</IonButton>  
+          <IonButton fill="clear" routerLink="/fcptv">funccompViewTemplate</IonButton> 
+          <IonButton fill="clear" routerLink="/geo">Geo</IonButton> 
           <IonButton fill="clear" routerLink="/key">keyboard</IonButton>  
         </IonCard>
         <IonFab vertical='bottom' horizontal='end' slot='fixed'>
