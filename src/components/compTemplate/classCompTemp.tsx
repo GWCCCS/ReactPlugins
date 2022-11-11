@@ -1,7 +1,7 @@
 import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { Component } from 'react'
 
-export class ctContainer extends Component {
+export class classCompTemp extends Component {
 
     state: { property1: string, property2: string, property3: string }
         constructor(props: any) {
@@ -36,7 +36,7 @@ export class ctContainer extends Component {
             <IonPage>
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Template Component View</IonTitle>
+                    <IonTitle>Class Component Template View</IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
@@ -60,4 +60,4 @@ export class ctContainer extends Component {
     }
 }
 
-export default ctContainer
+export default classCompTemp
