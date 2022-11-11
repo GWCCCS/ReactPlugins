@@ -14,7 +14,7 @@ const NewItem: React.FC = (props) => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-      <IconExample />
+      <IconExample value1={0}/>
       </IonContent>
     </IonPage>
   );
