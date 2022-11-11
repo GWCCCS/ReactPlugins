@@ -1,7 +1,8 @@
-import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+
+import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
 
-const ClassView = ({property1, property2, property3, updateData}: any) => {
+const ClassView = ({property1, property2, property3, updateData, image}: any) => {
     return (
         <IonPage>
         <IonHeader>
@@ -26,7 +27,16 @@ const ClassView = ({property1, property2, property3, updateData}: any) => {
             </div>
             <IonButton onClick={() => {updateData()}}>
             Update data
-        </IonButton>
+            </IonButton>
+            <IonList>
+                <IonItem>
+                <IonThumbnail slot="start">
+                    <img alt=" " src={image} />
+                    </IonThumbnail>
+                    <IonLabel>{image}</IonLabel>
+                </IonItem>
+           </IonList>            
+
         </IonContent>
     </IonPage>
     );
