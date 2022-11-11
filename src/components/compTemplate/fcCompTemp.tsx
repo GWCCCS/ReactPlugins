@@ -14,13 +14,7 @@ const FcCompTemp: React.FC<ContainerProps> = (props) => {
         setProperty3("test3 - " + Math.random());
     }
     
-    return (
-        <IonPage>
-        <IonHeader>
-            <IonToolbar>
-                <IonTitle>Functional Component Template View</IonTitle>
-            </IonToolbar>
-        </IonHeader>
+    return (        
         <IonContent fullscreen>
             <div>
                 <div>
@@ -37,7 +31,7 @@ const FcCompTemp: React.FC<ContainerProps> = (props) => {
             Update data
         </IonButton>
         </IonContent>
-    </IonPage>
+
     )
 }
 

@@ -1,7 +1,7 @@
-import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { Component } from 'react'
 
-export class classCompTemp extends Component {
+export class ClassCompTemp extends Component {
 
     state: { property1: string, property2: string, property3: string }
         constructor(props: any) {
@@ -36,6 +36,9 @@ export class classCompTemp extends Component {
             <IonPage>
             <IonHeader>
                 <IonToolbar>
+                    <IonButtons slot="start">
+                        <IonBackButton defaultHref='/home'/>
+                    </IonButtons>
                     <IonTitle>Class Component Template View</IonTitle>
                 </IonToolbar>
             </IonHeader>
@@ -60,4 +63,4 @@ export class classCompTemp extends Component {
     }
 }
 
-export default classCompTemp
+export default ClassCompTemp

@@ -1,8 +1,7 @@
 import { IonBackButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
-import FcCompTemp from '../components/compTemplate/fcCompTemp';
+import FcCompTemp from './fcCompTemp'
 
-import './NewItem2.css';
 
 const fcPageView: React.FC = (props) => {
   return (
@@ -16,7 +15,9 @@ const fcPageView: React.FC = (props) => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-       <FcCompTemp property1="1" property2="2" property3="3"/>
+      
+      <FcCompTemp property1="1" property2="2" property3="3"/>
+
       </IonContent>
     </IonPage>
   );

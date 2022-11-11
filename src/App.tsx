@@ -28,13 +28,13 @@ import AppContainer from './components/App/AppContainer';
 import HapticContainer from './components/Haptics/HapticsContainer';
 import MotionContainer from './components/Motion/MotionContainer';
 import NetworkContainer from './components/Network/NetworkContainer';
-import classCompTemp from './components/compTemplate/classCompTemp';
+import ClassCompTemp from './components/compTemplate/classCompTemp';
+import fcPageView from './components/compTemplate/fcPage'
+
 
 /* Theme variables */
 import './theme/variables.css';
 import IconExample from './components/IconExample';
-import FcCompTemp from './components/compTemplate/fcCompTemp';
-import fcPageView from './pages/fcPage';
 
 setupIonicReact();
 
@@ -50,7 +50,7 @@ const App: React.FC = () => (
         <Route path="/haptic" component={HapticContainer} exact={true} />
         <Route path="/device" component={DeviceContainer} exact={true} />
         <Route path="/appApi" component={AppContainer} exact={true} />
-        <Route path="/cct" component={classCompTemp} exact={true} />
+        <Route path="/cct" component={ClassCompTemp} exact={true} />
         <Route path="/fcptv" component={fcPageView} exact={true} />
         <Route path="/new" component={NewItem}/>
         <Route path="/secretpath" component={NewItem}/>
