@@ -49,6 +49,7 @@ const Home: React.FC<RouteComponentProps> = (props) => {
           <IonButton fill="clear" routerLink="/fcptv">funccompViewTemplate</IonButton> 
           <IonButton fill="clear" routerLink="/geo">Geo</IonButton> 
           <IonButton fill="clear" routerLink="/key">keyboard</IonButton>  
+          <IonButton fill="clear" routerLink="/http">http</IonButton>  
         </IonCard>
         <IonFab vertical='bottom' horizontal='end' slot='fixed'>
           <IonFabButton onClick={() => props.history.push('/new2')}>

@@ -30,13 +30,14 @@ import MotionContainer from './components/Motion/MotionContainer';
 import NetworkContainer from './components/Network/NetworkContainer';
 import ClassCompTemp from './components/compTemplate/classCompTemp';
 import fcPageView from './components/compTemplate/fcPage'
-
-
-/* Theme variables */
-import './theme/variables.css';
 import IconExample from './components/IconExample';
 import KeyPageView from './components/Keyboard/keyPage';
 import GeoContainer from './components/geo/GeoContainer';
+import HttpComp from './components/Http/HttpComp'
+
+/* Theme variables */
+import './theme/variables.css';
+
 
 setupIonicReact();
 
@@ -55,7 +56,7 @@ const App: React.FC = () => (
         <Route path="/cct" component={ClassCompTemp} exact={true} />
         <Route path="/fcptv" component={fcPageView} exact={true} />        
         <Route path="/geo" component={GeoContainer} exact={true} />
-        
+        <Route path="/http" component={HttpComp} exact={true} />
         <Route path="/key" component={KeyPageView} exact={true} />
         <Route path="/new" component={NewItem}/>
         <Route path="/secretpath" component={NewItem}/>

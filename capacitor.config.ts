@@ -8,6 +8,9 @@ const config: CapacitorConfig = {
       style: KeyboardStyle.Dark,
       resizeOnFullScreen: true,
     },
+    CapacitorHttp: {
+      enabled: true,
+    },
   },
   appId: 'io.ionic.starter',
   appName: 'myApp',
