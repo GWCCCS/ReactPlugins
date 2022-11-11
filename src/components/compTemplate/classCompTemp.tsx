@@ -1,5 +1,5 @@
-import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { Component } from 'react'
+import ClassView from './classView';
 
 export class ClassCompTemp extends Component {
 
@@ -33,32 +33,13 @@ export class ClassCompTemp extends Component {
     }
     render() {
         return (
-            <IonPage>
-            <IonHeader>
-                <IonToolbar>
-                    <IonButtons slot="start">
-                        <IonBackButton defaultHref='/home'/>
-                    </IonButtons>
-                    <IonTitle>Class Component Template View</IonTitle>
-                </IonToolbar>
-            </IonHeader>
-            <IonContent fullscreen>
-                <div>
-                    <div>
-                        Property 1: {this.state.property1}
-                    </div>
-                    <div>
-                        Property 2: {this.state.property2}
-                    </div>
-                    <div>
-                        Property 3: {this.state.property3}   
-                    </div>
-                </div>
-                <IonButton onClick={() => {this.updateData()}}>
-                Update data
-            </IonButton>
-            </IonContent>
-        </IonPage>
+            <ClassView
+            property1 = {this.state.property1}
+            property2 = {this.state.property2}
+            property3 = {this.state.property3}
+            updateData = {() => {this.updateData()}}
+            />
+
         )
     }
 }
