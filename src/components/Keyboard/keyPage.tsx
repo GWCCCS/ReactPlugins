@@ -1,10 +1,9 @@
 import { IonBackButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
-import FcCompTemp from './fcCompTemp'
+import KeyboardComp from './KeyboardCont';
 
 
-
-const fcPageView: React.FC = (props) => {
+const KeyPageView: React.FC = (props) => {
   return (
     <IonPage>
       <IonHeader>
@@ -12,15 +11,15 @@ const fcPageView: React.FC = (props) => {
           <IonButtons slot="start">
             <IonBackButton defaultHref='/home'/>
           </IonButtons>
-          <IonTitle>React FC Page with embedded Functional Component</IonTitle>
+          <IonTitle>React FC Page with embedded Keyboard Functional Component</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
       
-      <FcCompTemp property1="1" property2="2" property3="3"/>
-
+      <KeyboardComp info={undefined}></KeyboardComp>
+      
       </IonContent>
     </IonPage>
   );
 };
-export default fcPageView;
+export default KeyPageView;
