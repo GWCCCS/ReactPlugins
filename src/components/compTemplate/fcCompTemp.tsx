@@ -9,9 +9,9 @@ const FcCompTemp: React.FC<ContainerProps> = (props) => {
     const [property3, setProperty3] = React.useState(props.property3);
 
     const updateData = () => {
-        setProperty1(property1 + 1);
-        setProperty2(property2 + 1);
-        setProperty3(property3 + 1);
+        setProperty1("test1 - " + Math.random());
+        setProperty2("test2 - " + Math.random());
+        setProperty3("test3 - " + Math.random());
     }
     
     return (
