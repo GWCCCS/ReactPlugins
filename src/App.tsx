@@ -33,6 +33,7 @@ import classCompTemp from './components/compTemplate/classCompTemp';
 /* Theme variables */
 import './theme/variables.css';
 import IconExample from './components/IconExample';
+import FcCompTemp from './components/compTemplate/fcCompTemp';
 
 setupIonicReact();
 
@@ -48,7 +49,8 @@ const App: React.FC = () => (
         <Route path="/haptic" component={HapticContainer} exact={true} />
         <Route path="/device" component={DeviceContainer} exact={true} />
         <Route path="/appApi" component={AppContainer} exact={true} />
-        <Route path="/ct" component={classCompTemp} exact={true} />
+        <Route path="/cct" component={classCompTemp} exact={true} />
+        <Route path="/fct" component={FcCompTemp} exact={true} />
         <Route path="/new" component={NewItem}/>
         <Route path="/secretpath" component={NewItem}/>
         <Route path='/new2' component={NewItem2}/>
