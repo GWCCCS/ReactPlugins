@@ -1,26 +1,27 @@
-import { IonBackButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBackButton, IonButton, IonButtons, IonCheckbox, IonCol, IonContent, IonGrid, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
-import FcCompTemp from './fcCompTemp'
 
 
 
-const fcPageView: React.FC = (props) => {
+const inputFormPageView: React.FC = (props) => {
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonBackButton defaultHref='/home'/>
-          </IonButtons>
-          <IonTitle>React FC Page with embedded Functional Component</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent>
-      
-      <FcCompTemp property1="1" property2="2" property3="3"/>
-
-      </IonContent>
-    </IonPage>
+      <form className="ion-padding">
+        <IonItem>
+          <IonLabel position="floating">Username</IonLabel>
+          <IonInput />
+        </IonItem>
+        <IonItem>
+          <IonLabel position="floating">Password</IonLabel>
+          <IonInput type="password" />
+        </IonItem>
+        <IonItem lines="none">
+          <IonLabel>Remember me</IonLabel>
+          <IonCheckbox defaultChecked={true} slot="start" />
+        </IonItem>
+        <IonButton className="ion-margin-top" type="submit" expand="block">
+          Login
+        </IonButton>
+      </form>
   );
 };
-export default fcPageView;
+export default inputFormPageView;

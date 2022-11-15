@@ -1,9 +1,16 @@
-import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonText, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
+import {control, useForm} from 'react-hook-form';
 
 interface ContainerProps {property1 : any, property2 : any, property3: any}
 
-const FcCompTemp: React.FC<ContainerProps> = (props) => {
+const inputFormComp: React.FC<ContainerProps> = (props) => {
+    const { control, handleSubmit } = useForm();
+
+    const registerUser = (data) => {
+        console.log('creating user account', data);
+    }
+
     const [property1, setProperty1] = React.useState(props.property1);
     const [property2, setProperty2] = React.useState(props.property2);
     const [property3, setProperty3] = React.useState(props.property3);
@@ -15,24 +22,29 @@ const FcCompTemp: React.FC<ContainerProps> = (props) => {
     }
     
     return (        
-        <IonContent fullscreen>
-            <div>
-                <div>
-                    Property 1: {property1}
-                </div>
-                <div>
-                    Property 2: {property2}
-                </div>
-                <div>
-                    Property 3: {property3}   
-                </div>
-            </div>
-            <IonButton onClick={() => {updateData()}}>
-            Update data
-        </IonButton>
+        <IonPage>
+        <IonContent className="ion-padding">
+          <IonText color="muted">
+            <h2>Create Account</h2>
+          </IonText>
+          <form onSubmit={handleSubmit(registerUser)}>
+            <IonItem>
+              <IonLabel position="floating">Email</IonLabel>
+              <Controller
+                as={<IonInput type="email" />}
+                name="email"
+                control={control}
+                onChangeName="onIonChange"
+              />
+            </IonItem>
+            <IonButton expand="block" type="submit" className="ion-margin-top">
+              Register
+            </IonButton>
+          </form>
         </IonContent>
+      </IonPage>
 
     )
 }
 
-export default FcCompTemp
+export default inputFormComp
