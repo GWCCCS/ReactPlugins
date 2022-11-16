@@ -1,6 +1,6 @@
 import { IonButton, IonContent, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonText, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
-import {control, useForm} from 'react-hook-form';
+import {Controller, Control, useForm} from 'react-hook-form';
 
 interface ContainerProps {property1 : any, property2 : any, property3: any}
 

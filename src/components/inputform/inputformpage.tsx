@@ -1,27 +1,56 @@
-import { IonBackButton, IonButton, IonButtons, IonCheckbox, IonCol, IonContent, IonGrid, IonHeader, IonInput, IonItem, IonLabel, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
-import React from 'react';
+import { IonContent, IonPage, IonText, IonInput, IonButton, IonCheckbox, IonItem, IonLabel } from "@ionic/react";
+import React from "react";
+import "./Home.css";
+import { useForm } from "react-hook-form";
+import Input, { InputProps } from "../Input";
 
+const InputFormPage: React.FC = () => {
+  const { control, handleSubmit } = useForm();
+  
+  const formFields: InputProps[] = [
+    {
+      name: "email",
+      component: <IonInput type="email" />,
+      label: "Email",
+    },
+    {
+      name: "fullName",
+      label: "Full Name",
+    },
+    {
+      name: "password",
+      component: <IonInput type="password" clearOnEdit={false} />,
+      label: "Password",
+    },
+  ];
 
+  const registerUser = (data) => {
+    console.log("creating a new user account with: ", data);
+  };
 
-const inputFormPageView: React.FC = (props) => {
   return (
-      <form className="ion-padding">
-        <IonItem>
-          <IonLabel position="floating">Username</IonLabel>
-          <IonInput />
-        </IonItem>
-        <IonItem>
-          <IonLabel position="floating">Password</IonLabel>
-          <IonInput type="password" />
-        </IonItem>
-        <IonItem lines="none">
-          <IonLabel>Remember me</IonLabel>
-          <IonCheckbox defaultChecked={true} slot="start" />
-        </IonItem>
-        <IonButton className="ion-margin-top" type="submit" expand="block">
-          Login
-        </IonButton>
-      </form>
+    <IonPage>
+      <IonContent>
+        <div className="ion-padding">
+          <IonText color="muted">
+            <h2>Create Account</h2>
+          </IonText>
+          <form onSubmit={handleSubmit(registerUser)}>
+            {formFields.map((field, index) => (
+              <Input {...field} control={control} key={index} />
+            ))}
+            <IonItem>
+              <IonLabel>I agree to the terms of service</IonLabel>
+              <IonCheckbox slot="start" />
+            </IonItem>
+            <IonButton expand="block" type="submit" className="ion-margin-top">
+              Register
+            </IonButton>
+          </form>
+        </div>
+      </IonContent>
+    </IonPage>
   );
 };
-export default inputFormPageView;
+
+export default InputFormPage;
