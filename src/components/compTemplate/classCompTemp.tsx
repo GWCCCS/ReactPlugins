@@ -14,13 +14,34 @@ export class ClassCompTemp extends Component {
         }
     }
 
+    async resolveAfter2Seconds() {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            resolve('resolved');
+          }, 2000);
+        });
+      }
+      
+      async  asyncCall() {
+        let current_time = new Date()
+        const sec1 = current_time.getSeconds()
+        console.log('calling @', current_time.getSeconds());
+        const result = await this.resolveAfter2Seconds();
+        console.log(result);
+        current_time = new Date()
+        const sec = current_time.getSeconds()
+        console.log("end of async call @", sec)
+        this.setState({
+            property1: JSON.stringify("Entry Time:" + sec1),
+            property2: JSON.stringify("Exit Time:" + sec)
+        });
+      }
+
     updateData() {
         this.getCompInfo();
     }
     
     async getCompInfo() {
-        const data1 = "test1 - " + Math.random(); // await Device.getInfo();
-        const data2 = "test2 - " + Math.random(); // await Device.getBatteryInfo();
         const data3 = "test3 - " + Math.random(); // await Device.getLanguageCode();
         let new_image = ''
         if(this.state.image_source !==  '/assets/dog.jpg')
@@ -28,15 +49,12 @@ export class ClassCompTemp extends Component {
         else
             new_image = '/assets/shapes.svg';
 
-
         this.setState({
-            property1: JSON.stringify(data1),
-            property2: JSON.stringify(data2),
             property3: JSON.stringify(data3),
             image_source: new_image
         });
 
-
+        this.asyncCall()
 
     }
 
