@@ -37,6 +37,7 @@ import './theme/variables.css';
 import IconExample from './components/IconExample';
 import KeyPageView from './components/Keyboard/keyPage';
 import GeoContainer from './components/geo/GeoContainer';
+import InputFormComp from './components/inputform/inputformcomp';
 
 setupIonicReact();
 
@@ -56,6 +57,7 @@ const App: React.FC = () => (
         <Route path="/fcptv" component={fcPageView} exact={true} />        
         <Route path="/geo" component={GeoContainer} exact={true} />
         
+        <Route path="/input" component={InputFormComp} exact={true} />
         <Route path="/key" component={KeyPageView} exact={true} />
         <Route path="/new" component={NewItem}/>
         <Route path="/secretpath" component={NewItem}/>
