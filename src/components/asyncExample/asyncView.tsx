@@ -2,7 +2,7 @@
 import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
 
-const ClassView = ({property1, property2, property3, updateData, image}: any) => {
+const AsyncView = ({property1, property2, property3, updateData, image}: any) => {
     return (
         <IonPage>
         <IonHeader>
@@ -42,4 +42,4 @@ const ClassView = ({property1, property2, property3, updateData, image}: any) =>
     );
   };
   
-  export default ClassView;
+  export default AsyncView;

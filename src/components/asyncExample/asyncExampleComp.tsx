@@ -1,7 +1,7 @@
 import { Component } from 'react'
-import ClassView from './classView';
+import AsyncView from './asyncView'
 
-export class ClassCompTemp extends Component {
+export class asyncExampleComp extends Component {
 
     state: { property1: string, property2: string, property3: string, image_source: string}
         constructor(props: any) {
@@ -96,7 +96,7 @@ export class ClassCompTemp extends Component {
     }
     render() {
         return (
-            <ClassView
+            <AsyncView
             property1 = {this.state.property1}
             property2 = {this.state.property2}
             property3 = {this.state.property3}
@@ -108,4 +108,4 @@ export class ClassCompTemp extends Component {
     }
 }
 
-export default ClassCompTemp
+export default asyncExampleComp
