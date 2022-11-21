@@ -25,12 +25,12 @@ export class asyncExampleComp extends Component {
       async  asyncCallAwait() {
         let current_time = new Date()
         const sec1 = current_time.getSeconds()
-        console.log('calling @', current_time.getSeconds());
+        console.log('await calling @', current_time.getSeconds());
         const result = await this.resolveAfter2Seconds();
-        console.log(result);
+        console.log('await result:' + result);
         current_time = new Date()
         const sec = current_time.getSeconds()
-        console.log("end of async call @", sec)
+        console.log("await call end @", sec)
         this.setState({
             property1: JSON.stringify("Entry Time: " + sec1 + "--- Exit Time: " + sec + "  " + result)
         });
@@ -39,12 +39,12 @@ export class asyncExampleComp extends Component {
        asyncCallnoAwait() {
         let current_time = new Date()
         const sec1 = current_time.getSeconds()
-        console.log('calling @', current_time.getSeconds());
+        console.log('\t\t\tno wait calling @', current_time.getSeconds());
         const result = this.resolveAfter2Seconds();
-        console.log(result);
+        console.log('\t\t\tno wait result:' + result);
         current_time = new Date()
         const sec = current_time.getSeconds()
-        console.log("end of async call @", sec)
+        console.log("\t\t\tno wait call end @", sec)
         this.setState({
             property2: JSON.stringify("Entry Time: " + sec1 + "--- Exit Time: " + sec + "  " + result)
         });
@@ -53,17 +53,19 @@ export class asyncExampleComp extends Component {
       async  asyncCallCallback() {
         let current_time = new Date()
         const sec1 = current_time.getSeconds()
-        console.log('calling @', current_time.getSeconds());
+        console.log('\tCall w/CB @', current_time.getSeconds());
         const result = this.resolveAfter2Seconds();
         result.then((value) => this.reportCallback(value, sec1) )
-
+        current_time = new Date()
+        const sec = current_time.getSeconds()
+        console.log("\tCall w/CB end @", sec)
       }
 
       reportCallback = (value : any, sec1: any) => {
         console.log();
         let current_time = new Date()
         const sec = current_time.getSeconds()
-        console.log("end of async call @", sec)
+        console.log("\tCallBack @", sec)
         this.setState({
             property3: JSON.stringify("Entry Time: " + sec1 + "--- Exit Time: " + sec + "  " + value)
         });
