@@ -16,13 +16,13 @@ const ClassView = ({property1, property2, property3, updateData, image}: any) =>
         <IonContent fullscreen>
             <div>
                 <div>
-                    Property 1: {property1}
+                    Async Await   : {property1}
                 </div>
                 <div>
-                    Property 2: {property2}
+                    Async No await: {property2}
                 </div>
                 <div>
-                    Property 3: {property3}   
+                    Async Callback: {property3}   
                 </div>
             </div>
             <IonButton onClick={() => {updateData()}}>

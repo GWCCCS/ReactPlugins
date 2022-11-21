@@ -22,7 +22,7 @@ export class ClassCompTemp extends Component {
         });
       }
       
-      async  asyncCall() {
+      async  asyncCallAwait() {
         let current_time = new Date()
         const sec1 = current_time.getSeconds()
         console.log('calling @', current_time.getSeconds());
@@ -32,8 +32,40 @@ export class ClassCompTemp extends Component {
         const sec = current_time.getSeconds()
         console.log("end of async call @", sec)
         this.setState({
-            property1: JSON.stringify("Entry Time:" + sec1),
-            property2: JSON.stringify("Exit Time:" + sec)
+            property1: JSON.stringify("Entry Time: " + sec1 + "--- Exit Time: " + sec + "  " + result)
+        });
+      }
+
+       asyncCallnoAwait() {
+        let current_time = new Date()
+        const sec1 = current_time.getSeconds()
+        console.log('calling @', current_time.getSeconds());
+        const result = this.resolveAfter2Seconds();
+        console.log(result);
+        current_time = new Date()
+        const sec = current_time.getSeconds()
+        console.log("end of async call @", sec)
+        this.setState({
+            property2: JSON.stringify("Entry Time: " + sec1 + "--- Exit Time: " + sec + "  " + result)
+        });
+      }
+
+      async  asyncCallCallback() {
+        let current_time = new Date()
+        const sec1 = current_time.getSeconds()
+        console.log('calling @', current_time.getSeconds());
+        const result = this.resolveAfter2Seconds();
+        result.then((value) => this.reportCallback(value, sec1) )
+
+      }
+
+      reportCallback = (value : any, sec1: any) => {
+        console.log();
+        let current_time = new Date()
+        const sec = current_time.getSeconds()
+        console.log("end of async call @", sec)
+        this.setState({
+            property3: JSON.stringify("Entry Time: " + sec1 + "--- Exit Time: " + sec + "  " + value)
         });
       }
 
@@ -41,8 +73,7 @@ export class ClassCompTemp extends Component {
         this.getCompInfo();
     }
     
-    async getCompInfo() {
-        const data3 = "test3 - " + Math.random(); // await Device.getLanguageCode();
+    getCompInfo() {
         let new_image = ''
         if(this.state.image_source !==  '/assets/dog.jpg')
             new_image = '/assets/dog.jpg';
@@ -50,16 +81,18 @@ export class ClassCompTemp extends Component {
             new_image = '/assets/shapes.svg';
 
         this.setState({
-            property3: JSON.stringify(data3),
             image_source: new_image
         });
 
-        this.asyncCall()
+
+        this.asyncCallAwait()
+        this.asyncCallnoAwait()
+        this.asyncCallCallback()
 
     }
 
     componentDidMount() {
-        this.getCompInfo();
+       // this.getCompInfo();
     }
     render() {
         return (
