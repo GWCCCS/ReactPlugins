@@ -40,6 +40,11 @@ const Home: React.FC<RouteComponentProps> = (props) => {
             <IonItem>
             <IonButton fill="clear" routerLink="/key">keyboard</IonButton>  
             </IonItem>
+            <IonItem>
+            <IonButton fill="clear" routerLink="/async">Async Example</IonButton>  
+            </IonItem>
+                        
+            
           </IonList>
         </IonContent>
       </IonMenu>
