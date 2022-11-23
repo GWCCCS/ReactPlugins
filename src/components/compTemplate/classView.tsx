@@ -16,13 +16,13 @@ const ClassView = ({property1, property2, property3, updateData, image}: any) =>
         <IonContent fullscreen>
             <div>
                 <div>
-                    Async Await   : {property1}
+                    Property 1: {property1}
                 </div>
                 <div>
-                    Async No await: {property2}
+                    Property 2: {property2}
                 </div>
                 <div>
-                    Async Callback: {property3}   
+                    Property 3: {property3}   
                 </div>
             </div>
             <IonButton onClick={() => {updateData()}}>
@@ -36,6 +36,14 @@ const ClassView = ({property1, property2, property3, updateData, image}: any) =>
                     <IonLabel>{image}</IonLabel>
                 </IonItem>
            </IonList>            
+
+            <form onSubmit={updateData()}>
+            <label>
+                Name:
+                <input type="text" name="property1" value = {property1} />
+            </label>
+            <input type="submit" value="Submit" />
+            </form>
 
         </IonContent>
     </IonPage>
