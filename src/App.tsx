@@ -28,7 +28,7 @@ import AppContainer from './components/App/AppContainer';
 import HapticContainer from './components/Haptics/HapticsContainer';
 import MotionContainer from './components/Motion/MotionContainer';
 import NetworkContainer from './components/Network/NetworkContainer';
-import ClassCompTemp from './components/compTemplate/classCompTemp';
+
 import fcPageView from './components/compTemplate/fcPage'
 
 
@@ -37,7 +37,9 @@ import './theme/variables.css';
 import IconExample from './components/IconExample';
 import KeyPageView from './components/Keyboard/keyPage';
 import GeoContainer from './components/geo/GeoContainer';
+import ClassCompTemp from './components/compTemplate/classCompTemp';
 import asyncExampleComp from './components/asyncExample/asyncExampleComp';
+import FormView from './components/inputform/inputform';
 
 setupIonicReact();
 
@@ -61,8 +63,8 @@ const App: React.FC = () => (
         <Route path="/new" component={NewItem}/>
         <Route path="/secretpath" component={NewItem}/>
         <Route path='/new2' component={NewItem2}/>
-
         <Route path="/balloon" component={IconExample}/>
+        <Route path="/form" component={FormView}/>
         <Route component={NewItem}/>
       </IonRouterOutlet>
       <Route exact path="/2new2" render={(props) => {

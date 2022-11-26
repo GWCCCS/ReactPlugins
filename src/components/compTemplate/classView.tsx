@@ -1,6 +1,7 @@
 
 import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
+import FormView from '../inputform/inputform';
 
 const ClassView = ({property1, property2, property3, updateData, image}: any) => {
     return (
@@ -36,7 +37,7 @@ const ClassView = ({property1, property2, property3, updateData, image}: any) =>
                     <IonLabel>{image}</IonLabel>
                 </IonItem>
            </IonList>            
-
+            <FormView></FormView>
         </IonContent>
     </IonPage>
     );
