@@ -1,7 +1,6 @@
 
 import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
-import FormView from '../inputform/inputform';
 
 const ClassView = ({property1, property2, property3, updateData, image}: any) => {
     return (
@@ -17,13 +16,13 @@ const ClassView = ({property1, property2, property3, updateData, image}: any) =>
         <IonContent fullscreen>
             <div>
                 <div>
-                    Property 1: {property1}
+                    Async Await   : {property1}
                 </div>
                 <div>
-                    Property 2: {property2}
+                    Async No await: {property2}
                 </div>
                 <div>
-                    Property 3: {property3}   
+                    Async Callback: {property3}   
                 </div>
             </div>
             <IonButton onClick={() => {updateData()}}>
@@ -37,7 +36,7 @@ const ClassView = ({property1, property2, property3, updateData, image}: any) =>
                     <IonLabel>{image}</IonLabel>
                 </IonItem>
            </IonList>            
-            <FormView></FormView>
+
         </IonContent>
     </IonPage>
     );

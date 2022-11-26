@@ -3,6 +3,7 @@ import { RouteComponentProps } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 import { add } from 'ionicons/icons';
+import FormView from '../components/inputform/inputform';
 
 
 const Home: React.FC<RouteComponentProps> = (props) => {
@@ -86,6 +87,7 @@ const Home: React.FC<RouteComponentProps> = (props) => {
             </IonItem>
             </IonList>
           </IonCard>
+          <FormView></FormView>
           <IonFab vertical='bottom' horizontal='end' slot='fixed'>
             <IonFabButton onClick={() => props.history.push('/new2')}>
               <IonIcon icon={add}/>

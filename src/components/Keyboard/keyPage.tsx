@@ -1,5 +1,6 @@
 import { IonBackButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
+import FormView from '../inputform/inputform';
 import KeyboardComp from './KeyboardCont';
 
 
@@ -15,7 +16,6 @@ const KeyPageView: React.FC = (props) => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-      
       <KeyboardComp info={undefined}></KeyboardComp>
       
       </IonContent>
