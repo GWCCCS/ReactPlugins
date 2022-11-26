@@ -55,7 +55,8 @@ export class asyncExampleComp extends Component {
         const sec1 = current_time.getSeconds()
         console.log('\tCall w/CB @', current_time.getSeconds());
         const result = this.resolveAfter2Seconds();
-        result.then((value) => this.reportCallback(value, sec1) )
+        const sec2 = current_time.getSeconds()
+        result.then((value) => this.reportCallback(value, sec2) )
         current_time = new Date()
         const sec = current_time.getSeconds()
         console.log("\tCall w/CB end @", sec)
