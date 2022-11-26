@@ -6,6 +6,21 @@ import { add } from 'ionicons/icons';
 
 
 const Home: React.FC<RouteComponentProps> = (props) => {
+
+  const [property1, setProperty1] = React.useState('');
+  const [property2, setProperty2] = React.useState('');
+  const [property3, setProperty3] = React.useState('');
+
+  const updateAppData = (p1, p2, p3) => {
+      setProperty1(p1);
+      setProperty2(p2);
+      setProperty3(p3);
+  }
+
+  function getAppData() {
+      return [property1, property2, property3];
+  }
+
   return (
     <IonPage>
       <IonMenu contentId="main-content">
