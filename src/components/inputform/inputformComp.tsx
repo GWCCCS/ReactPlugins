@@ -1,29 +1,36 @@
 import React, { ChangeEvent, FormEvent } from "react";
 
-type SubmitEvent = FormEvent<HTMLFormElement>;
 type InputEvent = ChangeEvent<HTMLInputElement>;
 
-type Props = {
-  state: string;
-  setState: (val: string) => void;
-  handleOnSubmit: (e: SubmitEvent) => void;
-  placeholder: string;
-};
+interface ContainerProps {property1 : any, property2 : any, property3: any}
 
-const Form: React.FC<Props> = ({
-  state,
-  setState,
-  handleOnSubmit,
-  placeholder,
-}) => {
+const Form: React.FC<ContainerProps> = (props) => {
+  const [property1, setProperty1] = React.useState(props.property1);
+  const [property2, setProperty2] = React.useState(props.property2);
+  const [property3, setProperty3] = React.useState(props.property3);
+
+  const updateData = (e: FormEvent) => {
+      e.preventDefault();
+      console.log({property1},{property2},{property3});
+  }
+
   return (
-    <form onSubmit={handleOnSubmit}>
+    <form onSubmit={updateData}>
       <input
         type="text"
-        value={state}
-        onChange={(e: InputEvent) => setState(e.target.value)}
-        placeholder={placeholder}
+        value={property1}
+        onChange={(e: InputEvent) => setProperty1(e.target.value)}
       />
+      <input
+        type="text"
+        value={property2}
+        onChange={(e: InputEvent) => setProperty2(e.target.value)}
+      />    
+      <input
+        type="text"
+        value={property3}
+        onChange={(e: InputEvent) => setProperty3(e.target.value)}
+      />            
       <button type="submit">Submit</button>
     </form>
   );

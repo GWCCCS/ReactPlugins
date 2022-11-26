@@ -6,17 +6,12 @@ type FormEvent = React.FormEvent<HTMLFormElement>;
 
 
 const FormView: React.FC = (props) => {
-  const [state, setState] = useState("");
-  const handleOnSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    console.log({ state });
-  };
+
   return (
     <Form
-      state={state}
-      setState={setState}
-      handleOnSubmit={handleOnSubmit}
-      placeholder="Type some letters"
+      property1=''
+      property2=''
+      property3=''
     />
   ); 
 };
