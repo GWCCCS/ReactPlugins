@@ -38,10 +38,12 @@ import IconExample from './components/IconExample';
 import KeyPageView from './components/Keyboard/keyPage';
 import GeoContainer from './components/geo/GeoContainer';
 import asyncExampleComp from './components/asyncExample/asyncExampleComp';
+import React from 'react';
 
 setupIonicReact();
 
-const App: React.FC = () => (
+const App: React.FC = () => {
+  return (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
@@ -71,5 +73,5 @@ const App: React.FC = () => (
     </IonReactRouter>
   </IonApp>
 );
-
+}
 export default App;
