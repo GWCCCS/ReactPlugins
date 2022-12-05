@@ -1,11 +1,9 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import Form from './inputformComp';
 
-type FormEvent = React.FormEvent<HTMLFormElement>;
 
-
-const FormView: React.FC = (props) => {
+const FormView: React.FC = () => {
 
   return (
     <Form

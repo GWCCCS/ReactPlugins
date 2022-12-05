@@ -32,6 +32,7 @@ const Form: React.FC<ContainerProps> = (props) => {
         onChange={(e: InputEvent) => setProperty3(e.target.value)}
       />            
       <button type="submit">Submit</button>
+      Property 1 is {property1}
     </form>
   );
 };
