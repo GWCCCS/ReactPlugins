@@ -9,7 +9,11 @@ const FcCompTemp: React.FC<ContainerProps> = (props) => {
     const [property3, setProperty3] = React.useState(props.property3);
 
     const updateData = () => {
-        setProperty1("test1 - " + Math.random());
+        if(property1 === '/assets/SVG_Logo.svg.png')
+            setProperty1('/assets/dog.jpg');
+        else
+            setProperty1('/assets/SVG_Logo.svg.png');
+
         setProperty2("test2 - " + Math.random());
         setProperty3("test3 - " + Math.random());
     }
@@ -17,6 +21,7 @@ const FcCompTemp: React.FC<ContainerProps> = (props) => {
     return (        
         <IonContent fullscreen>
             <div>
+                <img alt=" " src={property1} onClick={() => {updateData()}}/>
                 <div>
                     Property 1: {property1}
                 </div>

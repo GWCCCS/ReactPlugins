@@ -4,7 +4,7 @@ import ClassView from './classView';
 export class ClassCompTemp extends Component {
 
     state: { property1: string, property2: string, property3: string }
-        constructor(props: any) {
+    constructor(props: any) {
         super(props)
         this.state = {
             property1: '',
